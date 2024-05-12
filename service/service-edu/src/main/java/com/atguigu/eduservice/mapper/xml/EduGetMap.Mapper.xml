@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="EduGetMap">
+
+  <resultMap id="getAllMap" type="hashmap" >
+    <result property="id" column="id" javaType="java.lang.String"></result>
+    <result property="name" column="name" javaType="java.lang.String"></result>
+    <result property="intro" column="intro" javaType="java.lang.String"></result>
+    <result property="career" column="career" javaType="java.lang.String"></result>
+    <result property="level" column="level" javaType="java.lang.String"></result>
+    <result property="avatar" column="avatar" javaType="java.lang.String"></result>
+    <result property="sort" column="sort" javaType="java.lang.String"></result>
+    <result property="isDeleted" column="is_deleted" javaType="java.lang.String"></result>
+    <result property="gmtCreate" column="gmt_create" javaType="java.util.Date"></result>
+    <result property="gmtModified" column="gmt_modified" javaType="java.util.Date"></result>
+  </resultMap>
+
+  <select id="getAll" parameterType="hashmap" resultMap="getAllMap">
+    select * from edu_teacher
+  </select>
+
+</mapper>
